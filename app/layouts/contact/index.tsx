@@ -2,6 +2,7 @@ import { css } from "@emotion/css";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { Button } from "~/components/button";
+import { ResponsiveContainer } from "~/components/container";
 import { H2 } from "~/components/typography/h2";
 import { COLORS } from "~/constants/colors";
 import { useRemixFetcher } from "~/hooks/use-remix-fetcher";
@@ -9,26 +10,6 @@ import { CONTACT_FORM_SCHEMA, CONTACT_FORM_SCHEMA_TYPE } from "~/utils/schemas";
 
 export default function Contact() {
   const style = {
-    container: css({
-      margin: "0 auto 160px auto",
-      width: "100%",
-      "@media (min-width: 640px)": {
-        maxWidth: "640px",
-      },
-      "@media (min-width: 768px)": {
-        maxWidth: "768px",
-      },
-      "@media (min-width: 1024px)": {
-        maxWidth: "1024px",
-      },
-      "@media (min-width: 1280px)": {
-        maxWidth: "1280px",
-      },
-      "@media (min-width: 1536px)": {
-        maxWidth: "1536px",
-      },
-    }),
-
     title: css({
       textAlign: "center",
       marginBottom: "72px",
@@ -38,11 +19,13 @@ export default function Contact() {
       display: "flex",
       flexDirection: "column",
       gap: "24px",
-      backgroundColor: `${COLORS.primary.lightest}`,
-      padding: "24px",
+      backgroundColor: COLORS.primary.darker,
+      padding: "32px",
       borderRadius: "16px",
       maxWidth: "800px",
       margin: "0 auto",
+      border: `1px solid ${COLORS.primary.dark}`,
+      boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     }),
 
     inputContainer: css({
@@ -54,44 +37,46 @@ export default function Contact() {
     label: css({
       fontSize: "16px",
       fontWeight: "600",
-      color: "#111827",
+      color: COLORS.primary.light,
     }),
 
     input: css({
-      backgroundColor: `${COLORS.primary.light}`,
-      border: "none",
-      padding: "8px",
+      backgroundColor: COLORS.primary.darkest,
+      border: `1px solid ${COLORS.primary.dark}`,
+      padding: "12px",
       borderRadius: "8px",
       outline: "none",
-      color: "#111827",
+      color: COLORS.primary.lightest,
 
       "&:focus": {
-        boxShadow: `0px 0px 0px 4px ${COLORS.primary.light}50`,
+        borderColor: COLORS.accent.purple,
+        boxShadow: `0 0 0 2px ${COLORS.accent.purple}25`,
       },
 
       "&::placeholder": {
-        color: "#11182780",
+        color: COLORS.primary.dark,
         fontSize: "16px",
         fontWeight: "500",
       },
     }),
 
     textarea: css({
-      backgroundColor: `${COLORS.primary.light}`,
-      border: "none",
+      backgroundColor: COLORS.primary.darkest,
+      border: `1px solid ${COLORS.primary.dark}`,
       resize: "none",
-      padding: "8px",
+      padding: "12px",
       borderRadius: "8px",
       outline: "none",
-      color: "#111827",
+      color: COLORS.primary.lightest,
       height: "150px",
 
       "&:focus": {
-        boxShadow: `0px 0px 0px 4px ${COLORS.primary.light}50`,
+        borderColor: COLORS.accent.purple,
+        boxShadow: `0 0 0 2px ${COLORS.accent.purple}25`,
       },
 
       "&::placeholder": {
-        color: "#11182780",
+        color: COLORS.primary.dark,
         fontSize: "16px",
         fontWeight: "500",
       },
@@ -143,7 +128,6 @@ export default function Contact() {
   console.log(errors);
 
   const onSubmit = (data: CONTACT_FORM_SCHEMA_TYPE) => {
-    console.log("data", data);
     if (data.address) {
       console.log("Posible spam detectado");
       return;
@@ -156,8 +140,8 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className={style.container}>
-      <div className={style.title}>
+    <ResponsiveContainer>
+      <div id="contact" className={style.title}>
         <H2 weight="semi-bold" variant="5xl" classname={style.title}>
           Contact me
         </H2>
@@ -174,6 +158,7 @@ export default function Contact() {
           </label>
           <input
             id="name"
+            type="text"
             {...register("name")}
             className={style.input}
             placeholder="Your name"
@@ -187,6 +172,7 @@ export default function Contact() {
           </label>
           <input
             id="email"
+            type="email"
             {...register("email")}
             className={style.input}
             placeholder="Your email"
@@ -226,6 +212,6 @@ export default function Contact() {
           </Button>
         </div>
       </fetcher.Form>
-    </div>
+    </ResponsiveContainer>
   );
 }

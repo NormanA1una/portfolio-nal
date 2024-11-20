@@ -25,19 +25,22 @@ const paddingMap: Record<NonNullable<ButtonProps["size"]>, string> = {
 
 const variantMap: Record<NonNullable<ButtonProps["variant"]>, CSSObject> = {
   primary: {
-    background: `linear-gradient(45deg, ${COLORS.primary.dark}, ${COLORS.primary.darker})`,
-    transition: "all 0.1s ease",
-    color: COLORS.primary.lightest,
+    background: COLORS.accent.purple,
+    transition: "all 0.2s ease",
+    color: "#FFFFFF",
     ":hover": {
-      transform: "scale(1.02)",
-      background: `linear-gradient(225deg, ${COLORS.primary.medium}, ${COLORS.primary.dark})`,
+      transform: "translateY(-2px)",
+      background: COLORS.accent.purpleHover,
+      boxShadow: "0 4px 12px rgba(157, 124, 216, 0.25)",
     },
     ":active": {
-      boxShadow: `0px 0px 0px 4px ${COLORS.primary.light}50`,
+      transform: "translateY(0)",
+      boxShadow: `0 0 0 2px ${COLORS.accent.purple}50`,
     },
     ":disabled": {
-      background: `linear-gradient(45deg, ${COLORS.primary.light}, ${COLORS.primary.medium})`,
+      background: COLORS.primary.dark,
       cursor: "not-allowed",
+      transform: "none",
     },
   },
 

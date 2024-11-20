@@ -1,10 +1,14 @@
 export const COLORS = {
   primary: {
-    darkest: "#150016",
-    darker: "#29104A",
-    dark: "#522C5D",
-    medium: "#845162",
-    light: "#E3B6B1",
-    lightest: "#FFE3D8",
+    darkest: "#1A1B26",
+    darker: "#24283B",
+    dark: "#565F89",
+    medium: "#7AA2F7",
+    light: "#A9B1D6",
+    lightest: "#C0CAF5",
+  },
+  accent: {
+    purple: "#9D7CD8",
+    purpleHover: "#7957A8",
   },
 };

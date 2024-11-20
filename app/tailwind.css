@@ -21,7 +21,7 @@ body {
 
 html,
 body {
-  @apply bg-gradient-to-br from-[#150016] to-[#29104A];
+  @apply bg-gradient-to-br from-[#1A1B26] to-[#24283B];
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;

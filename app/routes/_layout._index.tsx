@@ -5,13 +5,6 @@ import Projects from "~/layouts/projects";
 import Skills from "~/layouts/skills";
 import { sendEmail } from "~/utils/mailer.server";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Portfolio" },
-    { name: "description", content: "Portfolio" },
-  ];
-};
-
 export const action = async ({ request }: ActionFunctionArgs) => {
   const formData = await request.formData();
 

@@ -31,3 +31,10 @@ type NavbarProps = {
 };
 
 type FooterProps = NavbarProps;
+
+type Project = {
+  title: string;
+  description: string;
+  url: string;
+  img: string;
+};
