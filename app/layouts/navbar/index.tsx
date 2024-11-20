@@ -3,6 +3,7 @@ import { Link, useNavigate } from "@remix-run/react";
 import { Button } from "~/components/button";
 import { Paragraph } from "~/components/typography/paragraph";
 import { COLORS } from "~/constants/colors";
+import { MobileNav } from "./mobile/mobile-nav";
 
 export default function Navbar({ pathNames }: NavbarProps) {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export default function Navbar({ pathNames }: NavbarProps) {
       height: "70px",
       zIndex: 100,
       backgroundColor: COLORS.primary.darkest,
-      display: "flex",
+      display: "none",
       justifyContent: "center",
       alignItems: "center",
       "&::after": {
@@ -29,6 +30,9 @@ export default function Navbar({ pathNames }: NavbarProps) {
         height: "2px",
         background: `linear-gradient(90deg, transparent, ${COLORS.primary.medium}, transparent)`,
         animation: "borderSlide 3s linear infinite",
+      },
+      "@media (min-width: 1024px)": {
+        display: "flex",
       },
     }),
 
@@ -47,24 +51,28 @@ export default function Navbar({ pathNames }: NavbarProps) {
       },
     }),
   };
+
   return (
-    <nav className={style.container}>
-      <ul className={style.list}>
-        {pathNames.map((pathName) => (
-          <li key={pathName.name}>
-            <Link className={style.link} to={pathName.path}>
-              <Paragraph variant="md" weight="semi-bold">
-                {pathName.name}
-              </Paragraph>
-            </Link>
+    <>
+      <nav className={style.container}>
+        <ul className={style.list}>
+          {pathNames.map((pathName) => (
+            <li key={pathName.name}>
+              <Link className={style.link} to={pathName.path}>
+                <Paragraph variant="md" weight="semi-bold">
+                  {pathName.name}
+                </Paragraph>
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Button variant="primary" onClick={() => navigate("#contact")}>
+              Contact
+            </Button>
           </li>
-        ))}
-        <li>
-          <Button variant="primary" onClick={() => navigate("#contact")}>
-            Contact
-          </Button>
-        </li>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+      <MobileNav pathNames={pathNames} />
+    </>
   );
 }

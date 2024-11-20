@@ -125,8 +125,6 @@ export default function Contact() {
     },
   });
 
-  console.log(errors);
-
   const onSubmit = (data: CONTACT_FORM_SCHEMA_TYPE) => {
     if (data.address) {
       console.log("Posible spam detectado");
