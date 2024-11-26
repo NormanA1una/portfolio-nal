@@ -50,5 +50,9 @@ export const variantStyles: Record<
     "@media(min-width: 1024px)": { fontSize: "60px", lineHeight: "72px" },
   },
 
-  "7xl": { fontSize: "72px", lineHeight: "90px" },
+  "7xl": {
+    fontSize: "48px",
+    lineHeight: "60px",
+    "@media(min-width: 1024px)": { fontSize: "72px", lineHeight: "90px" },
+  },
 };

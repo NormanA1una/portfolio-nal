@@ -95,16 +95,28 @@ const SkillSection = ({
       display: "flex",
       gap: "72px",
       flexWrap: "wrap",
-      justifyContent: "start",
+      justifyContent: "center",
       alignItems: "center",
+      "@media (min-width: 640px)": {
+        justifyContent: "start",
+      },
+    }),
+    title: css({
+      textAlign: "center",
+      marginBottom: "16px",
+      "@media (min-width: 640px)": {
+        textAlign: "start",
+      },
     }),
   };
 
   return (
     <div className={style.skillDiv}>
-      <Paragraph variant="xl" weight="semi-bold">
-        {title}
-      </Paragraph>
+      <div className={style.title}>
+        <Paragraph variant="xl" weight="semi-bold">
+          {title}
+        </Paragraph>
+      </div>
       <div className={style.skillsContainer}>
         {skills.map((skill) => (
           <div key={skill.name} className="card example-2">
@@ -129,6 +141,10 @@ export default function Skills() {
       display: "flex",
       flexDirection: "column",
       gap: "48px",
+      padding: "0 24px",
+      "@media (min-width: 640px)": {
+        padding: "0 0",
+      },
     }),
   };
 
@@ -155,6 +171,10 @@ export default function Skills() {
             alignItems: "center",
             gap: "24px",
             marginTop: "48px",
+            padding: "0 24px",
+            "@media (min-width: 640px)": {
+              padding: "0 0",
+            },
           })}
         >
           <Paragraph

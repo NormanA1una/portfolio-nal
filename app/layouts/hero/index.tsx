@@ -10,12 +10,18 @@ export default function Hero() {
       flexDirection: "column",
       alignItems: "start",
       justifyContent: "center",
-      paddingTop: "160px",
+      padding: "120px 24px 0 24px",
+      "@media (min-width: 640px)": {
+        padding: "160px 0 0 0",
+      },
     }),
 
     title: css({
-      textAlign: "start",
+      textAlign: "center",
       marginBottom: "48px",
+      "@media (min-width: 640px)": {
+        textAlign: "start",
+      },
     }),
   };
 
