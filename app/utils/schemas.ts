@@ -1,11 +1,11 @@
 import { InferType, object, string } from "yup";
 
 export const CONTACT_FORM_SCHEMA = object().shape({
-  name: string().required("El nombre es requerido"),
+  name: string().required("Name is required"),
   email: string()
-    .email("El email es requerido")
-    .required("El email es requerido"),
-  message: string().required("El mensaje es requerido"),
+    .email("Email is required")
+    .required("Email is required"),
+  message: string().required("Message is required"),
   address: string(),
 });
 

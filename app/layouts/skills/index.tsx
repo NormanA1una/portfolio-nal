@@ -1,5 +1,5 @@
 import { css } from "@emotion/css";
-import { Icons } from "~/components/icons";
+import { Icons, PlaceholderIcon } from "~/components/icons";
 import { H2 } from "~/components/typography/h2";
 import { Paragraph } from "~/components/typography/paragraph";
 import { ResponsiveContainer } from "~/components/container";
@@ -10,6 +10,18 @@ const frontendSkills = [
   {
     name: "HTML",
     icon: Icons.html,
+  },
+  {
+    name: "React",
+    icon: Icons.react,
+  },
+  {
+    name: "TypeScript",
+    icon: Icons.typescript,
+  },
+  {
+    name: "TailwindCSS",
+    icon: Icons.tailwind,
   },
   {
     name: "Vue",
@@ -30,6 +42,25 @@ const frontendSkills = [
   {
     name: "Astro",
     icon: Icons.astro,
+  },
+  {
+    name: "React Hook Form",
+    icon: Icons.reactHookForm,
+  },
+];
+
+const mobileSkills = [
+  {
+    name: "React Native",
+    icon: Icons.reactNative,
+  },
+  {
+    name: "React Native Expo",
+    icon: Icons.expo,
+  },
+  {
+    name: "Capacitor",
+    icon: Icons.capacitor,
   },
 ];
 
@@ -61,6 +92,21 @@ const databaseSkills = [
     name: "PostgreSQL",
     icon: Icons.postgreSql,
   },
+  {
+    name: "Supabase",
+    icon: Icons.supabase,
+  },
+];
+
+const stateManagementSkills = [
+  {
+    name: "Redux",
+    icon: Icons.redux,
+  },
+  {
+    name: "Zustand",
+    icon: Icons.zustand,
+  },
 ];
 
 const toolsSkills = [
@@ -75,6 +121,61 @@ const toolsSkills = [
   {
     name: "LinkedIn",
     icon: Icons.linkedin,
+  },
+  {
+    name: "Clerk",
+    icon: Icons.clerk,
+  },
+  {
+    name: "Vercel",
+    icon: Icons.vercel,
+  },
+  {
+    name: "Supabase",
+    icon: Icons.supabase,
+  },
+  {
+    name: "Postman",
+    icon: Icons.postman,
+  },
+  {
+    name: "Strapi",
+    icon: Icons.strapi,
+  },
+  {
+    name: "AWS",
+    icon: Icons.aws,
+  },
+  {
+    name: "Terraform",
+    icon: Icons.terraform,
+  },
+  {
+    name: "Serverless",
+    icon: Icons.serverless,
+  },
+];
+
+const apiSkills = [
+  {
+    name: "Google Cloud",
+    icon: Icons.googleCloud,
+  },
+  {
+    name: "Shopify API",
+    icon: Icons.shopify,
+  },
+  {
+    name: "Twilio",
+    icon: Icons.twilio,
+  },
+  {
+    name: "Airtable API",
+    icon: Icons.airtable,
+  },
+  {
+    name: "Luma API",
+    icon: Icons.luma,
   },
 ];
 
@@ -159,9 +260,15 @@ export default function Skills() {
 
         <div className={style.skillsMainContainer}>
           <SkillSection title="Frontend" skills={frontendSkills} />
+          <SkillSection title="Mobile" skills={mobileSkills} />
           <SkillSection title="Backend" skills={backendSkills} />
           <SkillSection title="Databases" skills={databaseSkills} />
-          <SkillSection title="Tools" skills={toolsSkills} />
+          <SkillSection
+            title="State Management"
+            skills={stateManagementSkills}
+          />
+          <SkillSection title="Tools & Services" skills={toolsSkills} />
+          <SkillSection title="APIs" skills={apiSkills} />
         </div>
 
         <div
@@ -170,7 +277,7 @@ export default function Skills() {
             flexDirection: "column",
             alignItems: "center",
             gap: "24px",
-            marginTop: "48px",
+            marginTop: "120px",
             padding: "0 24px",
             "@media (min-width: 640px)": {
               padding: "0 0",
@@ -187,7 +294,7 @@ export default function Skills() {
           <Button
             variant="primary"
             size="lg"
-            onClick={() => window.open("/files/CVFSV1.pdf", "_blank")}
+            onClick={() => window.open("/files/NormanResume.pdf", "_blank")}
           >
             Download CV
           </Button>

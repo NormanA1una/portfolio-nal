@@ -62,16 +62,36 @@ export default function Footer({ pathNames }: FooterProps) {
 
       <ul className={style.icons}>
         <li>
-          <Link className={style.iconLink} to="www.linkedin.com/in/normanaluna">
+          <a
+            className={style.iconLink}
+            href="https://www.linkedin.com/in/normanaluna"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Icons.linkedin />
-          </Link>
+          </a>
         </li>
         <li>
-          <Link className={style.iconLink} to="https://github.com/NormanA1una">
+          <a
+            className={style.iconLink}
+            href="https://github.com/NormanA1una"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Icons.github />
-          </Link>
+          </a>
         </li>
       </ul>
+
+      <Paragraph
+        variant="sm"
+        style={{
+          color: COLORS.primary.light,
+          marginTop: "8px",
+        }}
+      >
+        © {new Date().getFullYear()} Norman Aranda Luna. All rights reserved.
+      </Paragraph>
     </footer>
   );
 }

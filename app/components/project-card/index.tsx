@@ -58,6 +58,65 @@ export const ProjectCard = ({
                 <H6 variant="sm" style={{ color: "#FCFCFC" }}>
                   {project.description}
                 </H6>
+                {project.technologies && project.technologies.length > 0 && (
+                  <div
+                    className={css({
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: "8px",
+                      marginTop: "8px",
+                    })}
+                  >
+                    {project.technologies.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className={css({
+                          backgroundColor: "rgba(122, 162, 247, 0.2)",
+                          color: "#C0CAF5",
+                          padding: "4px 8px",
+                          borderRadius: "4px",
+                          fontSize: "12px",
+                          fontWeight: "500",
+                        })}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {project.features && project.features.length > 0 && (
+                  <div
+                    className={css({
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "4px",
+                      marginTop: "8px",
+                    })}
+                  >
+                    {project.features.map((feature, idx) => (
+                      <H6
+                        key={idx}
+                        variant="xs"
+                        style={{
+                          color: "#A9B1D6",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
+                        }}
+                      >
+                        <span
+                          className={css({
+                            width: "4px",
+                            height: "4px",
+                            borderRadius: "50%",
+                            backgroundColor: "#7AA2F7",
+                          })}
+                        />
+                        {feature}
+                      </H6>
+                    ))}
+                  </div>
+                )}
               </div>
               <div
                 className={css({
@@ -75,7 +134,7 @@ export const ProjectCard = ({
                     className={styles.projectLink}
                     onClick={(e) => e.stopPropagation()}
                   >
-                    Ver sitio web
+                    View website
                   </Link>
                 </Button>
               </div>

@@ -19,36 +19,36 @@ export const sendEmail = async (data: EmailData) => {
   const mailOptions: Mail.Options = {
     from: data.email,
     to: process.env.PERSONAL_EMAIL,
-    subject: `Información sobre servicios requeridos`,
+    subject: `Information about services requested`,
     html: `
     <div style="background-color: #150016; color: #FFE3D8; padding: 24px; border-radius: 16px; font-family: Arial, sans-serif;">
       <div style="background: linear-gradient(45deg, #522C5D, #29104A); padding: 32px; border-radius: 8px;">
-        <h1 style="color: #FFE3D8; font-size: 36px; font-weight: 700; margin: 0 0 24px 0;">¡Hola!</h1>
+        <h1 style="color: #FFE3D8; font-size: 36px; font-weight: 700; margin: 0 0 24px 0;">Hello!</h1>
         
         <p style="font-size: 24px; font-weight: 600; color: #E3B6B1; margin: 16px 0;">
-          ¡Estoy interesado en tus servicios!
+          I'm interested in your services!
         </p>
         
         <p style="font-size: 24px; font-weight: 600; color: #E3B6B1; margin: 24px 0 16px 0;">
-          Aquí están mis detalles de contacto:
+          Here are my contact details:
         </p>
         
         <div style="background-color: #29104A; padding: 24px; border-radius: 8px; margin: 16px 0;">
           <ul style="list-style: none; padding: 0; margin: 0;">
             <li style="color: #FFE3D8; font-size: 20px; margin: 12px 0;">
-              <strong style="color: #E3B6B1;">Nombre:</strong> ${data.name}
+              <strong style="color: #E3B6B1;">Name:</strong> ${data.name}
             </li>
             <li style="color: #FFE3D8; font-size: 20px; margin: 12px 0;">
               <strong style="color: #E3B6B1;">Email:</strong> ${data.email}
             </li>
             <li style="color: #FFE3D8; font-size: 20px; margin: 12px 0;">
-              <strong style="color: #E3B6B1;">Mensaje:</strong> ${data.message}
+              <strong style="color: #E3B6B1;">Message:</strong> ${data.message}
             </li>
           </ul>
         </div>
 
         <p style="font-size: 24px; color: #E3B6B1; font-weight: 600; margin: 24px 0 0 0; text-align: center;">
-          ¡Muchas gracias! ¡Espero que hablemos pronto! 🧾
+          Thank you very much! I hope we talk soon! 🧾
         </p>
       </div>
     </div>`,

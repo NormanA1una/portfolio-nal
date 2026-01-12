@@ -37,4 +37,6 @@ type Project = {
   description: string;
   url: string;
   img: string;
+  technologies?: string[];
+  features?: string[];
 };

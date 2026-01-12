@@ -36,7 +36,7 @@ export default function Projects() {
       <div id="projects">
         <div className={css({ textAlign: "center", marginBottom: "72px" })}>
           <H2 variant="5xl" weight="semi-bold">
-            Proyectos
+            Projects
           </H2>
         </div>
 

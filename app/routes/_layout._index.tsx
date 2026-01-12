@@ -3,6 +3,7 @@ import Contact from "~/layouts/contact";
 import Hero from "~/layouts/hero";
 import Projects from "~/layouts/projects";
 import Skills from "~/layouts/skills";
+import Experience from "~/layouts/experience";
 import { sendEmail } from "~/utils/mailer.server";
 
 export const action = async ({ request }: ActionFunctionArgs) => {
@@ -22,7 +23,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   ) {
     return {
       success: false,
-      message: "Todos los campos son requeridos y deben ser texto",
+      message: "All fields are required and must be text",
     };
   }
 
@@ -36,7 +37,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
     const message = await sendEmail(data).then((res) => res.json());
     return { success: true, message };
   } catch (error) {
-    return { success: false, message: "Error al enviar el email" };
+    return { success: false, message: "Error sending email" };
   }
 };
 
@@ -45,6 +46,7 @@ export default function Index() {
     <div>
       <Hero />
       <Skills />
+      <Experience />
       <Projects />
       <Contact />
     </div>

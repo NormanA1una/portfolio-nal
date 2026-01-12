@@ -29,7 +29,7 @@ export default function Hero() {
     <ResponsiveContainer className={style.container}>
       <div className={style.title}>
         <H1 variant="7xl" weight="semi-bold">
-          Welcome to my portfolio
+          Fullstack Software Engineer
         </H1>
       </div>
       <Bio />

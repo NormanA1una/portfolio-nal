@@ -24,6 +24,12 @@
   background: #222;
   color: #fff;
   border-radius: var(--border-radius);
+  overflow: visible;
+}
+
+.card .inner svg {
+  flex-shrink: 0;
+  overflow: visible;
 }
 
 .example-2 {

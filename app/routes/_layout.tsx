@@ -4,10 +4,11 @@ import MainLayout from "~/layouts/main/main-layout";
 
 export const loader: LoaderFunction = async () => {
   const NAV_PATHNAMES = [
-    { name: "Home", nombre: "Inicio", path: "/" },
-    { name: "About", nombre: "Sobre mí", path: "/" },
-    { name: "Skills", nombre: "Habilidades", path: "#skills" },
-    { name: "Projects", nombre: "Proyectos", path: "#projects" },
+    { name: "Home", nombre: "Home", path: "/" },
+    { name: "About", nombre: "About", path: "/" },
+    { name: "Skills", nombre: "Skills", path: "#skills" },
+    { name: "Experience", nombre: "Experience", path: "#experience" },
+    { name: "Projects", nombre: "Projects", path: "#projects" },
   ];
 
   return json({ NAV_PATHNAMES });

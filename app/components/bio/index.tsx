@@ -9,19 +9,18 @@ export const Bio = () => {
   });
 
   return (
-    <div id="sobre-mi" className={style}>
+    <div id="about-me" className={style}>
       <Paragraph variant="lg" weight="semi-bold">
-        Hi! My name is Norman Aranda Luna, and I am a passionate full-stack
-        developer.
+        I am a Software Engineer who has significantly contributed to the
+        implementation of new technologies and the development of applications
+        for companies like Licorería Cocibolca and projects at Shuttle IT
+        Consulting.
       </Paragraph>
       <Paragraph variant="lg" weight="semi-bold">
-        Being responsible, organized, friendly and hardworking, I have always
-        left a positive impression on the projects I have participated in.
-      </Paragraph>
-      <Paragraph variant="lg" weight="semi-bold">
-        What excites me most about being a developer are the daily challenges
-        that drive us to think of creative and optimal solutions to solve those
-        problems.
+        I am adaptable, always willing to expand my knowledge, value teamwork,
+        and am passionate about continuous improvement. I thrive on daily
+        challenges that push me to think of creative and optimal solutions to
+        solve complex problems.
       </Paragraph>
     </div>
   );

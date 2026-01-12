@@ -2,29 +2,41 @@ export const PROJECTS = [
   {
     title: "IMMIGRATIONS DOCS LLC",
     description:
-      "Un sitio web enfocado en enviar documentos de inmigración para ser traducidos por expertos.",
+      "A website focused on sending immigration documents to be translated by experts.",
     url: "https://immigrationdocsllc.com/",
     img: "url(/img/IDLLC.webp)",
   },
   {
     title: "TENNESSEE ROOTS TREE SERVICES",
     description:
-      "Tennessee Roots Tree Services se dedica a proporcionar servicios profesionales de cuidado de árboles en Tennessee.",
+      "Tennessee Roots Tree Services is dedicated to providing professional tree care services in Tennessee.",
     url: "https://www.tnrootstreecompany.com/",
     img: "url(/img/TNRTS.webp)",
   },
   {
     title: "SHUTTLE IT CONSULTING",
     description:
-      "Proveedor de soluciones digitales que te ayuda a crear sitios web visualmente atractivos mientras aborda los desafíos empresariales.",
+      "Digital solutions provider that helps you create visually appealing websites while addressing business challenges. Development of custom websites with responsive design, performance optimization, and SEO.",
     url: "https://www.shuttleconsulting.com/",
     img: "url(/img/SHUTTLE.webp)",
+    technologies: ["Angular", "Astro", "Remix", "Strapi", "Swiper", "Bootstrap"],
+    features: [
+      "Responsive design",
+      "Performance optimization",
+      "SEO optimized",
+    ],
   },
   {
     title: "LICORERÍA COCIBOLCA",
     description:
-      "Licorería Cocibolca es una empresa dedicada a la venta de licores y productos relacionados con la bebida en la ciudad de Granada, Nicaragua.",
+      "Licorería Cocibolca is a company dedicated to the sale of liquors and beverage-related products in the city of Granada, Nicaragua. Includes online product catalog and complete billing and inventory system.",
     url: "https://www.licoreriacocibolca.com/",
     img: "url(/img/lico-web.webp)",
+    technologies: ["Remix", "NestJS", "Supabase", "PostgreSQL"],
+    features: [
+      "Online product catalog",
+      "Billing system",
+      "Inventory management",
+    ],
   },
 ];

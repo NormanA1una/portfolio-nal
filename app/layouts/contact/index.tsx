@@ -102,10 +102,10 @@ export default function Contact() {
 
   const fetcher = useRemixFetcher({
     onError: () => {
-      console.error("Error al enviar el formulario");
+      console.error("Error sending form");
     },
     onSuccess: () => {
-      console.log("Formulario enviado correctamente");
+      console.log("Form submitted successfully");
     },
   });
 
@@ -127,7 +127,7 @@ export default function Contact() {
 
   const onSubmit = (data: CONTACT_FORM_SCHEMA_TYPE) => {
     if (data.address) {
-      console.log("Posible spam detectado");
+      console.log("Possible spam detected");
       return;
     }
 
